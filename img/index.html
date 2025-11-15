@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro Comercial - Mapa Interactivo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <h1>Centro Comercial Oriental</h1>
+        <p>Plano Interactivo de Locales</p>
+    </header>
+
+    <main class="main-content">
+        <div class="map-wrapper">
+            <!-- Entrada -->
+            <div class="entrance">
+                <div class="entrance-arrow"></div>
+                <span class="entrance-label">Entrada</span>
+            </div>
+
+            <!-- Grid 2x2 de 4 locales -->
+            <div class="stores-grid">
+                <div class="store-item" data-store="1">
+                    <div class="store-card store-1">
+                        <div class="store-content">
+                            <div class="store-number">1</div>
+                            <div class="store-name">Artesanías</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="store-item" data-store="2">
+                    <div class="store-card store-2">
+                        <div class="store-content">
+                            <div class="store-number">2</div>
+                            <div class="store-name">Café</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="store-item" data-store="3">
+                    <div class="store-card store-3">
+                        <div class="store-content">
+                            <div class="store-number">3</div>
+                            <div class="store-name">Ropa</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="store-item" data-store="4">
+                    <div class="store-card store-4">
+                        <div class="store-content">
+                            <div class="store-number">4</div>
+                            <div class="store-name">Dulcería</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Local grande destacado a la derecha -->
+            <div class="featured-store">
+                <div class="store-item" data-store="5">
+                    <div class="store-card store-5">
+                        <div class="store-content">
+                            <div class="store-number">5</div>
+                            <div class="store-name">Joyería Premium</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Panel de información -->
+        <section class="info-section">
+            <div class="info-panel">
+                <h2 id="store-title" class="info-title">Selecciona un local</h2>
+                <p id="store-description" class="info-text">Haz clic en cualquier local para ver más información</p>
+                <div id="store-details" class="info-details"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Centro Comercial Oriental</p>
+    </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
