@@ -29,7 +29,7 @@ const storeData = {
 // Obtener elementos del DOM
 const storeItems = document.querySelectorAll('.store-item');
 const storeTitle = document.getElementById('store-title');
-const storeDescription = document.getElementById('store-text');
+const storeDescription = document.getElementById('store-description');
 const storeDetails = document.getElementById('store-details');
 
 // Función para mostrar información del local

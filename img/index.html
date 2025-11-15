@@ -15,46 +15,78 @@
 
     <main class="main-content">
         <div class="map-wrapper">
-            <!-- Entrada -->
-            <div class="entrance">
-                <div class="entrance-arrow"></div>
-                <span class="entrance-label">Entrada</span>
-            </div>
-
-            <!-- Grid 2x2 de 4 locales -->
-            <div class="stores-grid">
-                <div class="store-item" data-store="1">
-                    <div class="store-card store-1">
-                        <div class="store-content">
-                            <div class="store-number">1</div>
-                            <div class="store-name">Artesanías</div>
+            <!-- Contenedor para entrada y grid -->
+            <div class="left-section">
+                <!-- Grid 2x2 de 4 locales -->
+                <div class="stores-grid">
+                    <div class="store-item" data-store="1">
+                        <div class="store-card store-1">
+                            <div class="store-content">
+                                <div class="store-number">1</div>
+                                <div class="store-name">Artesanías</div>
+                            </div>
+                        </div>
+                        <!-- Agregando tooltip con imagen y descripción -->
+                        <div class="store-tooltip">
+                            <img class="tooltip-image" src="/placeholder.svg?height=80&width=80" alt="Artesanías">
+                            <div class="tooltip-info">
+                                <h4>Artesanías Sakura</h4>
+                                <p>Auténticas artesanías japonesas y souvenirs únicos</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="store-item" data-store="2">
-                    <div class="store-card store-2">
-                        <div class="store-content">
-                            <div class="store-number">2</div>
-                            <div class="store-name">Café</div>
+                    <!-- Entrada horizontal entre los dos locales de la izquierda -->
+                    <div class="entrance-horizontal">
+                        <span class="entrance-label">ENTRADA</span>
+                        <div class="entrance-arrow-horizontal"></div>
+                    </div>
+
+                    <div class="store-item" data-store="3">
+                        <div class="store-card store-3">
+                            <div class="store-content">
+                                <div class="store-number">3</div>
+                                <div class="store-name">Ropa</div>
+                            </div>
+                        </div>
+                        <div class="store-tooltip">
+                            <img class="tooltip-image" src="/placeholder.svg?height=80&width=80" alt="Ropa">
+                            <div class="tooltip-info">
+                                <h4>Tienda de Ropa</h4>
+                                <p>Moda japonesa contemporánea y diseños únicos</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="store-item" data-store="3">
-                    <div class="store-card store-3">
-                        <div class="store-content">
-                            <div class="store-number">3</div>
-                            <div class="store-name">Ropa</div>
+                    <div class="store-item" data-store="2">
+                        <div class="store-card store-2">
+                            <div class="store-content">
+                                <div class="store-number">2</div>
+                                <div class="store-name">Café</div>
+                            </div>
+                        </div>
+                        <div class="store-tooltip">
+                            <img class="tooltip-image" src="/placeholder.svg?height=80&width=80" alt="Café">
+                            <div class="tooltip-info">
+                                <h4>Café Tradicional</h4>
+                                <p>Auténtico té verde y café artesanal japonés</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="store-item" data-store="4">
-                    <div class="store-card store-4">
-                        <div class="store-content">
-                            <div class="store-number">4</div>
-                            <div class="store-name">Dulcería</div>
+                    <div class="store-item" data-store="4">
+                        <div class="store-card store-4">
+                            <div class="store-content">
+                                <div class="store-number">4</div>
+                                <div class="store-name">Dulcería</div>
+                            </div>
+                        </div>
+                        <div class="store-tooltip">
+                            <img class="tooltip-image" src="/placeholder.svg?height=80&width=80" alt="Dulcería">
+                            <div class="tooltip-info">
+                                <h4>Dulcería</h4>
+                                <p>Postres tradicionales y dulces artesanales únicos</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -67,6 +99,14 @@
                         <div class="store-content">
                             <div class="store-number">5</div>
                             <div class="store-name">Joyería Premium</div>
+                        </div>
+                    </div>
+                    <!-- Agregando tooltip para local destacado -->
+                    <div class="store-tooltip">
+                        <img class="tooltip-image" src="/placeholder.svg?height=100&width=100" alt="Joyería">
+                        <div class="tooltip-info">
+                            <h4>Joyería Premium</h4>
+                            <p>Joyería fina con diseños de tradición oriental y lujo contemporáneo</p>
                         </div>
                     </div>
                 </div>
