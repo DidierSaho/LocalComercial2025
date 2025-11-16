@@ -4,25 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centro Comercial Oriental - Plano Interactivo de Locales</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/home.css">
 </head>
 <body>
 <!-- Navigation -->
 <nav class="navbar" id="navbar">
     <div class="nav-container">
         <img src="./images/logo.png" alt="Logo Sakura Shopping Center" class="nav-logo" loading="lazy">
-        <div class="logo">
+        <a href="index.html" class="logo">
             <div class="logo-text">
                 <h1>桜商店街</h1>
                 <p>Sakura Shopping Center</p>
             </div>
-        </div>
+        </a>
         <ul class="nav-menu" id="navMenu">
-            <li><a href="#" data-page="home" class="nav-link active">Inicio</a></li>
-            <li><a href="#" data-page="servicios" class="nav-link">Servicios</a></li>
-            <li><a href="#" data-page="locales" class="nav-link">Locales</a></li>
-            <li><a href="#" data-page="ofertas" class="nav-link">Ofertas</a></li>
-            <li><a href="#" data-page="contacto" class="nav-link">Contacto</a></li>
+            <li><a href="index.html" class="nav-link active">Inicio</a></li>
+            <li><a href="servicios.html" class="nav-link">Servicios</a></li>
+            <li><a href="locales.html" class="nav-link">Locales</a></li>
+            <li><a href="ofertas.html" class="nav-link">Ofertas</a></li>
+            <li><a href="contacto.html" class="nav-link">Contacto</a></li>
         </ul>
         <div class="hamburger" id="hamburger">
             <span></span>
@@ -34,16 +35,15 @@
 
 <!-- Main Content -->
 <main class="main-content">
-    <!-- HOME PAGE -->
-    <section class="page active" id="home" data-page="home">
+    <section class="hero-section" id="home">
         <div class="hero">
             <div class="hero-content">
                 <h1 class="hero-title">いらっしゃいませ</h1>
                 <h2 class="hero-subtitle">Bienvenidos al Futuro</h2>
                 <p class="hero-description">Descubre la perfecta fusión entre tradición japonesa y modernidad en nuestro centro comercial temático.</p>
                 <div class="hero-buttons">
-                    <button class="btn btn-primary" onclick="navigateTo('locales')">Explorar Locales</button>
-                    <button class="btn btn-secondary" onclick="navigateTo('locales')">Ver Mapa</button>
+                    <a class="btn btn-primary" href="locales.html">Explorar Locales</a>
+                    <a class="btn btn-secondary" href="locales.html">Ver Mapa</a>
                 </div>
             </div>
             
@@ -90,283 +90,6 @@
             </div>
         </div>
     </section>
-
-    <!-- SERVICIOS PAGE -->
-    <section class="page" id="servicios" data-page="servicios">
-        <div class="page-header">
-            <h1>サービス - Servicios</h1>
-            <p>Experimenta servicios únicos inspirados en la hospitalidad japonesa</p>
-        </div>
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <rect x="3" y="11" width="18" height="10" rx="2"/>
-                        <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-                    </svg>
-                </div>
-                <h3>Estacionamiento Zen</h3>
-                <p>Espacios amplios con jardines japoneses para una experiencia de estacionamiento única.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                        <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
-                    </svg>
-                </div>
-                <h3>Área de Relajación</h3>
-                <p>Jardines zen con fuentes de agua y espacios de meditación para el descanso.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                        <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
-                        <circle cx="12" cy="13" r="2"/>
-                    </svg>
-                </div>
-                <h3>Concierge Japonés</h3>
-                <p>Asistencia personalizada con el espíritu de omotenashi japonés.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12.55a11 11 0 0 1 14.08 0"/>
-                        <path d="M1.42 9a16 16 0 0 1 21.16 0"/>
-                        <path d="M8.53 16.11a6 6 0 0 1 6.95 0"/>
-                        <circle cx="12" cy="20" r="1"/>
-                    </svg>
-                </div>
-                <h3>WiFi Gratuito</h3>
-                <p>Conexión de alta velocidad en todo el centro comercial.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- OFERTAS PAGE -->
-    <section class="page" id="ofertas" data-page="ofertas">
-        <div class="page-header">
-            <h1>特別オファー - Ofertas Especiales</h1>
-            <p>Promociones exclusivas con descuentos únicos</p>
-        </div>
-        <div class="offers-grid">
-            <div class="offer-card offer-card-primary">
-                <div class="offer-badge">30% OFF</div>
-                <h3>Festival de Sakura</h3>
-                <p>Celebra la temporada de primavera con descuentos especiales en moda y accesorios japoneses.</p>
-                <p class="offer-validity">Válido hasta: 30 de Abril</p>
-                <button class="btn btn-small btn-primary">Obtener Cupón</button>
-            </div>
-            <div class="offer-card offer-card-secondary">
-                <div class="offer-badge accent">2x1</div>
-                <h3>Noche de Ramen</h3>
-                <p>Todos los viernes disfruta de 2x1 en ramen y bebidas en nuestros restaurantes participantes.</p>
-                <p class="offer-validity">Todos los viernes de 6pm - 10pm</p>
-                <button class="btn btn-small btn-primary">Reservar Mesa</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- LOCALES PAGE -->
-    <section class="page" id="locales" data-page="locales">
-        <div class="page-header">
-            <h1>店舗 - Locales Comerciales</h1>
-            <p>Descubre tiendas únicas con esencia japonesa</p>
-        </div>
-
-        <!-- Buscador de Locales -->
-        <div class="search-section">
-            <div class="search-container">
-                <input type="text" id="storeSearch" class="store-search-input" placeholder="Buscar local... (ej: Perfumería, Café, Mascotas)">
-                <button class="btn btn-primary search-btn" onclick="searchStore()">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 20px; height: 20px;">
-                        <circle cx="11" cy="11" r="8"/>
-                        <path d="m21 21-4.35-4.35"/>
-                    </svg>
-                    Buscar
-                </button>
-                <button class="btn btn-secondary search-btn" onclick="document.getElementById('storeSearch').value = ''; searchStore();">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 20px; height: 20px;">
-                        <line x1="18" y1="6" x2="6" y2="18"/>
-                        <line x1="6" y1="6" x2="18" y2="18"/>
-                    </svg>
-                    Limpiar
-                </button>
-            </div>
-            <div id="searchResults" class="search-results"></div>
-        </div>
-        
-        <!-- Grid de Locales Existente -->
-        <div class="stores-grid">
-            <div class="store-card">
-                <div class="store-image">
-                    <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=500&h=300&fit=crop&q=80" alt="Zara Fashion">
-                </div>
-                <div class="store-content">
-                    <h3>Zara</h3>
-                    <p>Moda contemporánea con diseños exclusivos que fusionan estilo occidental y oriental.</p>
-                    <a href="https://bussetto.github.io/zara-homepage/" target="_blank" class="btn btn-small btn-primary">
-                        Visitar Tienda
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 14px; height: 14px; margin-left: 5px;">
-                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                            <polyline points="15 3 21 3 21 9"/>
-                            <line x1="10" y1="14" x2="21" y2="3"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="store-card">
-                <div class="store-image">
-                    <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=500&h=300&fit=crop&q=80" alt="Perfumería Oriental">
-                </div>
-                <div class="store-content">
-                    <h3>Perfumería Essence</h3>
-                    <p>Perfumes y fragancias inspiradas en los jardines zen con aromas únicos y sofisticados.</p>
-                    <a href="https://stwb00.github.io/local/" target="_blank" class="btn btn-small btn-primary">
-                        Visitar Tienda
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 14px; height: 14px; margin-left: 5px;">
-                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                            <polyline points="15 3 21 3 21 9"/>
-                            <line x1="10" y1="14" x2="21" y2="3"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="store-card">
-                <div class="store-image">
-                    <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=500&h=300&fit=crop&q=80" alt="4Patas Pet Store">
-                </div>
-                <div class="store-content">
-                    <h3>4Patas</h3>
-                    <p>Todo para tus mascotas con productos premium y servicios de grooming de alta calidad.</p>
-                    <a href="https://didiersaho.github.io/DesarrolloWebLocalComercialTP/index.html" target="_blank" class="btn btn-small btn-primary">
-                        Visitar Tienda
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 14px; height: 14px; margin-left: 5px;">
-                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                            <polyline points="15 3 21 3 21 9"/>
-                            <line x1="10" y1="14" x2="21" y2="3"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="store-card">
-                <div class="store-image">
-                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500&h=300&fit=crop&q=80" alt="Café Hana">
-                </div>
-                <div class="store-content">
-                    <h3>Café Hana</h3>
-                    <p>Cafetería con auténtico café japonés y repostería tradicional en un ambiente tranquilo.</p>
-                    <a href="https://juanirruiz.github.io/local_comercial_final/" target="_blank" class="btn btn-small btn-primary">
-                        Visitar Tienda
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 14px; height: 14px; margin-left: 5px;">
-                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                            <polyline points="15 3 21 3 21 9"/>
-                            <line x1="10" y1="14" x2="21" y2="3"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="store-card">
-                <div class="store-image">
-                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=500&h=300&fit=crop&q=80" alt="Dragon Oriental">
-                </div>
-                <div class="store-content">
-                    <h3>Magic Dragon</h3>
-                    <p>Restaurante de cocina oriental auténtica con especialidades en sushi, ramen y platillos tradicionales.</p>
-                    <a href="https://nacholiu.github.io/localComercial/promoActiva.html" target="_blank" class="btn btn-small btn-primary">
-                        Visitar Tienda
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 14px; height: 14px; margin-left: 5px;">
-                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                            <polyline points="15 3 21 3 21 9"/>
-                            <line x1="10" y1="14" x2="21" y2="3"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="map-simple-container">
-            <h2 class="map-simple-title">Plano del Centro Comercial</h2>
-            <div class="map-simple-wrapper">
-                <img src="./images/mapa.png" alt="Mapa del Centro Comercial" class="map-simple-image">
-            </div>
-        </div>
-    </section>
-    
-    <!-- CONTACTO PAGE -->
-    <section class="page" id="contacto" data-page="contacto">
-        <div class="page-header">
-            <h1>お問い合わせ - Contacto</h1>
-            <p>Estamos aquí para ayudarte</p>
-        </div>
-        <div class="contact-container">
-            <div class="contact-form-section">
-                <h2>Envíanos un Mensaje</h2>
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <label for="nombre">Nombre</label>
-                        <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required placeholder="tu@email.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="mensaje">Mensaje</label>
-                        <textarea id="mensaje" name="mensaje" rows="5" required placeholder="¿En qué podemos ayudarte?"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
-                </form>
-            </div>
-            <div class="contact-info-section">
-                <h2>Ubicación</h2>
-                <div class="map-container">
-                    <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.95373631531634!3d-37.81720997975159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnex100!5e0!3m2!1sen!2sau!4v1589860945253!5m2!1sen!2sau"
-                            width="100%"
-                            height="300"
-                            style="border:0;"
-                            allowfullscreen=""
-                            loading="lazy">
-                    </iframe>
-                </div>
-                <div class="contact-details">
-                    <h3>Información de Contacto</h3>
-                    <p>
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                            <circle cx="12" cy="10" r="3"/>
-                        </svg>
-                        Av. Sakura 桜 123, Ciudad Oriental
-                    </p>
-                    <p>
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                        </svg>
-                        +54 11 5555-1234
-                    </p>
-                    <p>
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                            <polyline points="22,6 12,13 2,6"/>
-                        </svg>
-                        info@sakuramall.com
-                    </p>
-                    <p>
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"/>
-                            <polyline points="12 6 12 12 16 14"/>
-                        </svg>
-                        Lun-Dom: 10:00 - 22:00
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
 </main>
 
 <!-- Footer -->
@@ -379,11 +102,11 @@
         <div class="footer-section">
             <h3>Enlaces Rápidos</h3>
             <ul>
-                <li><a href="#" onclick="navigateTo('home')">Inicio</a></li>
-                <li><a href="#" onclick="navigateTo('servicios')">Servicios</a></li>
-                <li><a href="#" onclick="navigateTo('locales')">Locales</a></li>
-                <li><a href="#" onclick="navigateTo('ofertas')">Ofertas</a></li>
-                <li><a href="#" onclick="navigateTo('contacto')">Contacto</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="locales.html">Locales</a></li>
+                <li><a href="ofertas.html">Ofertas</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </div>
         <div class="footer-section">

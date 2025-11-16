@@ -1,6 +1,5 @@
 // Navegación y rutas
 const navLinks = document.querySelectorAll('.nav-link');
-const pages = document.querySelectorAll('.page');
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('navMenu');
 const navbar = document.getElementById('navbar');
@@ -71,47 +70,34 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Función para navegar entre páginas
-function navigateTo(pageName) {
-    pages.forEach(page => page.classList.remove('active'));
-    const targetPage = document.getElementById(pageName);
-    if (targetPage) {
-        targetPage.classList.add('active');
-    }
+// Event listeners para los links de navegación (cierra el menú en mobile)
+if (navMenu) {
     navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.dataset.page === pageName) {
-            link.classList.add('active');
-        }
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+        });
     });
-    navMenu.classList.remove('active');
-    window.scrollTo(0, 0);
 }
 
-// Event listeners para los links de navegación
-navLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const pageName = link.dataset.page;
-        navigateTo(pageName);
-    });
-});
-
 // Hamburger menu
-hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-});
+if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+}
 
 // Cerrar menú al hacer click fuera
 document.addEventListener('click', (e) => {
-    if (!navbar.contains(e.target)) {
+    if (navbar && navMenu && !navbar.contains(e.target)) {
         navMenu.classList.remove('active');
     }
 });
 
 // Cerrar menú al hacer scroll
 window.addEventListener('scroll', () => {
-    navMenu.classList.remove('active');
+    if (navMenu) {
+        navMenu.classList.remove('active');
+    }
 });
 
 // Formulario de contacto
@@ -190,14 +176,6 @@ storeItems.forEach(item => {
 // Cargar primer local al abrir sitemap
 window.addEventListener('DOMContentLoaded', function() {
     displayStoreInfo(1);
-});
-
-// Inicializar con la página de inicio
-navigateTo('home');
-
-// Logo click para ir a inicio
-document.querySelector('.logo').addEventListener('click', () => {
-    navigateTo('home');
 });
 
 

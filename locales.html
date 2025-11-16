@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locales - Sakura Shopping Center</title>
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/locales.css">
+</head>
+<body>
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <img src="../images/logo.png" alt="Logo Sakura Shopping Center" class="nav-logo" loading="lazy">
+        <a href="../index.html" class="logo">
+            <div class="logo-text">
+                <h1>桜商店街</h1>
+                <p>Sakura Shopping Center</p>
+            </div>
+        </a>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="../index.html" class="nav-link">Inicio</a></li>
+            <li><a href="servicios.html" class="nav-link">Servicios</a></li>
+            <li><a href="locales.html" class="nav-link active">Locales</a></li>
+            <li><a href="ofertas.html" class="nav-link">Ofertas</a></li>
+            <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+
+<main class="main-content">
+    <section class="page-section">
+        <div class="page-header">
+            <h1>店舗 - Locales Comerciales</h1>
+            <p>Descubre tiendas únicas con esencia japonesa</p>
+        </div>
+
+        <div class="search-section">
+            <div class="search-container">
+                <input type="text" id="storeSearch" class="store-search-input" placeholder="Buscar local... (ej: Perfumería, Café, Mascotas)">
+                <button class="btn btn-primary search-btn" onclick="searchStore()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 20px; height: 20px;">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="m21 21-4.35-4.35"/>
+                    </svg>
+                    Buscar
+                </button>
+                <button class="btn btn-secondary search-btn" onclick="document.getElementById('storeSearch').value = ''; searchStore();">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 20px; height: 20px;">
+                        <line x1="18" y1="6" x2="6" y2="18"/>
+                        <line x1="6" y1="6" x2="18" y2="18"/>
+                    </svg>
+                    Limpiar
+                </button>
+            </div>
+            <div id="searchResults" class="search-results"></div>
+        </div>
+        
+        <div class="stores-grid">
+            <div class="store-card">
+                <div class="store-image">
+                    <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=500&h=300&fit=crop&q=80" alt="Zara Fashion">
+                </div>
+                <div class="store-content">
+                    <h3>Zara</h3>
+                    <p>Moda contemporánea con diseños exclusivos que fusionan estilo occidental y oriental.</p>
+                    <a href="https://bussetto.github.io/zara-homepage/" target="_blank" class="btn btn-small btn-primary">
+                        Visitar Tienda
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 14px; height: 14px; margin-left: 5px;">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                            <polyline points="15 3 21 3 21 9"/>
+                            <line x1="10" y1="14" x2="21" y2="3"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="store-card">
+                <div class="store-image">
+                    <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=500&h=300&fit=crop&q=80" alt="Perfumería Oriental">
+                </div>
+                <div class="store-content">
+                    <h3>Perfumería Essence</h3>
+                    <p>Perfumes y fragancias inspiradas en los jardines zen con aromas únicos y sofisticados.</p>
+                    <a href="https://stwb00.github.io/local/" target="_blank" class="btn btn-small btn-primary">
+                        Visitar Tienda
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 14px; height: 14px; margin-left: 5px;">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                            <polyline points="15 3 21 3 21 9"/>
+                            <line x1="10" y1="14" x2="21" y2="3"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="store-card">
+                <div class="store-image">
+                    <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=500&h=300&fit=crop&q=80" alt="4Patas Pet Store">
+                </div>
+                <div class="store-content">
+                    <h3>4Patas</h3>
+                    <p>Todo para tus mascotas con productos premium y servicios de grooming de alta calidad.</p>
+                    <a href="https://didiersaho.github.io/DesarrolloWebLocalComercialTP/index.html" target="_blank" class="btn btn-small btn-primary">
+                        Visitar Tienda
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 14px; height: 14px; margin-left: 5px;">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                            <polyline points="15 3 21 3 21 9"/>
+                            <line x1="10" y1="14" x2="21" y2="3"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="store-card">
+                <div class="store-image">
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500&h=300&fit=crop&q=80" alt="Café Hana">
+                </div>
+                <div class="store-content">
+                    <h3>Café Hana</h3>
+                    <p>Cafetería con auténtico café japonés y repostería tradicional en un ambiente tranquilo.</p>
+                    <a href="https://juanirruiz.github.io/local_comercial_final/" target="_blank" class="btn btn-small btn-primary">
+                        Visitar Tienda
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 14px; height: 14px; margin-left: 5px;">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                            <polyline points="15 3 21 3 21 9"/>
+                            <line x1="10" y1="14" x2="21" y2="3"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="store-card">
+                <div class="store-image">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=500&h=300&fit=crop&q=80" alt="Dragon Oriental">
+                </div>
+                <div class="store-content">
+                    <h3>Magic Dragon</h3>
+                    <p>Restaurante de cocina oriental auténtica con especialidades en sushi, ramen y platillos tradicionales.</p>
+                    <a href="https://nacholiu.github.io/localComercial/promoActiva.html" target="_blank" class="btn btn-small btn-primary">
+                        Visitar Tienda
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 14px; height: 14px; margin-left: 5px;">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                            <polyline points="15 3 21 3 21 9"/>
+                            <line x1="10" y1="14" x2="21" y2="3"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="map-simple-container">
+            <h2 class="map-simple-title">Plano del Centro Comercial</h2>
+            <div class="map-simple-wrapper">
+                <img src="../images/mapa.png" alt="Mapa del Centro Comercial" class="map-simple-image">
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>桜商店街 - Sakura Shopping Center</h3>
+            <p>Donde la tradición japonesa se encuentra con la modernidad.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Enlaces Rápidos</h3>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="locales.html">Locales</a></li>
+                <li><a href="ofertas.html">Ofertas</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Horarios 営業時間</h3>
+            <p>Lunes - Viernes: 10:00 - 22:00</p>
+            <p>Sábados: 09:00 - 23:00</p>
+            <p>Domingos: 10:00 - 21:00</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 桜商店街 Sakura Shopping Center. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>
